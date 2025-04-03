@@ -44,10 +44,10 @@ const Dashboard = () => {
   };
 
   // Update task
-  const updateTask = async (id, updatedTask) => {
+  const updateTask = async (updatedTask) => {
     try {
-      const res = await axios.put(`https://taskmanager-7k7p.onrender.com/api/tasks/${id}`, updatedTask);
-      setTasks(tasks.map(task => (task._id === id ? res.data : task)));
+      const res = await axios.put(`https://taskmanager-7k7p.onrender.com/api/tasks/${updatedTask._id}`, updatedTask);
+      setTasks(tasks.map(task => (task._id === updatedTask._id ? res.data : task)));
       setCurrentTask(null);
       setShowForm(false);
     } catch (err) {
