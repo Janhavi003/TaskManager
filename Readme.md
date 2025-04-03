@@ -49,7 +49,9 @@ npm install
 ```
 
 
-The application will be available at `http://localhost:3000`
+The application will be available at 
+Frontend: https://task-manager-bezt.vercel.app
+Backend: https://taskmanager-7k7p.onrender.com
 
 ## API Routes
 ### **Authentication Routes**
