@@ -1,8 +1,8 @@
-# Task Management App
+# Task Management App 
 
 A full-stack Task Management Application built with **React**, **Node.js**, **Express**, and **MongoDB**. Users can add, edit, delete, and mark tasks as completed.
 
-## Features
+## Features 
 - User authentication (JWT-based)
 - Create, update, delete tasks
 - Task categorization (Work, Personal, Urgent)

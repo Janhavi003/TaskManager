@@ -49,7 +49,7 @@ const Register = () => {
         
         <form onSubmit={onSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="name">
+            <label className="block text-white-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="name">
               Name
             </label>
             <input
@@ -58,12 +58,12 @@ const Register = () => {
               name="name"
               value={name}
               onChange={onChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
               required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="email">
+            <label className="block text-white-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="email">
               Email
             </label>
             <input
@@ -72,12 +72,12 @@ const Register = () => {
               name="email"
               value={email}
               onChange={onChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
               required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="password">
+            <label className="block text-white-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="password">
               Password
             </label>
             <input
@@ -86,13 +86,13 @@ const Register = () => {
               name="password"
               value={password}
               onChange={onChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
               required
               minLength="6"
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="confirmPassword">
+            <label className="block text-white-700 dark:text-gray-200 text-sm font-bold mb-2" htmlFor="confirmPassword">
               Confirm Password
             </label>
             <input
@@ -101,7 +101,7 @@ const Register = () => {
               name="confirmPassword"
               value={confirmPassword}
               onChange={onChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
               required
               minLength="6"
             />
@@ -116,7 +116,7 @@ const Register = () => {
           </div>
         </form>
         <div className="mt-6 text-center">
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-white-600 dark:text-gray-300">
             Already have an account?{' '}
             <Link to="/login" className="text-blue-500 hover:text-blue-700">
               Login

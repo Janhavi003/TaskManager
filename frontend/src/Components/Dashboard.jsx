@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import AuthContext from '../context/AuthContext';
 import TaskForm from './TaskForm';
 import TaskList from './TaskList';
 
@@ -11,13 +10,13 @@ const Dashboard = () => {
   const [currentTask, setCurrentTask] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [filter, setFilter] = useState('all');
-  // const { user } = useContext(AuthContext);
+
 
   // Fetch tasks from API
   const fetchTasks = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/tasks');
+      const res = await axios.get('https://taskmanager-7k7p.onrender.com/api/tasks');
       setTasks(res.data);
       setError(null);
     } catch (err) {
@@ -35,7 +34,7 @@ const Dashboard = () => {
   // Add new task
   const addTask = async (task) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/tasks', task);
+      const res = await axios.post('https://taskmanager-7k7p.onrender.com/api/tasks', task);
       setTasks([...tasks, res.data]);
       setShowForm(false);
     } catch (err) {
@@ -47,7 +46,7 @@ const Dashboard = () => {
   // Update task
   const updateTask = async (id, updatedTask) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/tasks/${id}`, updatedTask);
+      const res = await axios.put(`https://taskmanager-7k7p.onrender.com/api/tasks/${id}`, updatedTask);
       setTasks(tasks.map(task => (task._id === id ? res.data : task)));
       setCurrentTask(null);
       setShowForm(false);
@@ -60,7 +59,7 @@ const Dashboard = () => {
   // Delete task
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+      await axios.delete(`https://taskmanager-7k7p.onrender.com/api/tasks/${id}`);
       setTasks(tasks.filter(task => task._id !== id));
     } catch (err) {
       setError('Failed to delete task');
@@ -73,7 +72,7 @@ const Dashboard = () => {
     try {
       const taskToToggle = tasks.find(task => task._id === id);
       const updatedTask = { ...taskToToggle, completed: !taskToToggle.completed };
-      const res = await axios.put(`http://localhost:5000/api/tasks/${id}`, updatedTask);
+      const res = await axios.put(`https://taskmanager-7k7p.onrender.com/api/tasks/${id}`, updatedTask);
       setTasks(tasks.map(task => (task._id === id ? res.data : task)));
     } catch (err) {
       setError('Failed to update task');
