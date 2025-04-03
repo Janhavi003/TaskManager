@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
       if (token) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         try {
-          const res = await axios.get('/api/auth/user');
+          const res = await axios.get('https://taskmanager-7k7p.onrender.com/api/auth/user');
           setUser(res.data);
         } catch (err) {
           console.error('Error fetching user:', err);
