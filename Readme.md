@@ -34,7 +34,7 @@ git clone https://github.com/Janhavih003/TaskManager.git
 cd task-manager
 ```
 
-#### Install dependencies:
+#### Install dependencies and Start the Application:
 ##### Frontend:
 ```bash
 cd client
@@ -48,17 +48,6 @@ npm install
 
 ```
 
-#### Start the Application:
-##### Backend:
-```bash
-cd server
-npm start
-```
-##### Frontend:
-```bash
-cd client
-npm start
-```
 
 The application will be available at `http://localhost:3000`
 
